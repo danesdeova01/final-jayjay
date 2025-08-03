@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login Web on SauceDemo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-08-03T03:34:35" hostname="LAPTOP-05EG2TE6" time="15.948">
+  <properties/>
+  <testcase name="Successful login" classname="Login Web on SauceDemo" time="6.109"/>
+  <testcase name="Failed login with invalid credentials" classname="Login Web on SauceDemo" time="4.004"/>
+  <testcase name="Logout user" classname="Login Web on SauceDemo" time="5.835"/>
+  <system-out><![CDATA[
+@web
+Scenario: Successful login                 # src/test/java/web/features/login_web.feature:4
+  Given I am on the login page             # web.stepdefinitions.LoginWebSteps.iAmOnTheLoginPage()
+  When I enter valid username and password # web.stepdefinitions.LoginWebSteps.iEnterValidUsernameAndPassword()
+  Then I should see the products page      # web.stepdefinitions.LoginWebSteps.iShouldSeeTheProductsPage()
+
+@web
+Scenario: Failed login with invalid credentials # src/test/java/web/features/login_web.feature:9
+  Given I am on the login page                  # web.stepdefinitions.LoginWebSteps.iAmOnTheLoginPage()
+  When I enter invalid username and password    # web.stepdefinitions.LoginWebSteps.iEnterInvalidUsernameAndPassword()
+  Then I should see an error message            # web.stepdefinitions.LoginWebSteps.iShouldSeeAnErrorMessage()
+
+@web
+Scenario: Logout user                           # src/test/java/web/features/login_web.feature:14
+  Given I am logged in as a valid user          # web.stepdefinitions.LoginWebSteps.iAmLoggedInAsAValidUser()
+  When I click logout button                    # web.stepdefinitions.LoginWebSteps.iClickLogoutButton()
+  Then I should be redirected to the login page # web.stepdefinitions.LoginWebSteps.iShouldBeRedirectedToTheLoginPage()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Aug 03, 2025 10:34:38 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Aug 03, 2025 10:34:38 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Aug 03, 2025 10:34:42 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Aug 03, 2025 10:34:42 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Aug 03, 2025 10:34:46 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 138
+Aug 03, 2025 10:34:46 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 138.0.7204.184. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,954 @@
+
+@api
+aScenario: Get list of tags                       # src/test/java/api/features/tag_api.feature:4
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
++Driver info: driver.version: ChromeDriver
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+t  When I send GET request to tag API             # api.stepdefinitions.TagApiSteps.i_send_get_request_to_tag_api()
+y  Then the response status should be 200         # api.stepdefinitions.UserApiSteps.the_response_status_should_be_200()
+  And the response should contain a list of tags # api.stepdefinitions.TagApiSteps.the_response_should_contain_a_list_of_tags()
+
+@api
+`Scenario: Get user by ID                       # src/test/java/api/features/user_api.feature:4
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
++Driver info: driver.version: ChromeDriver
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+l  Given I have a valid user ID                 # api.stepdefinitions.UserApiSteps.i_have_a_valid_user_id()
+t  When I send GET request to user API          # api.stepdefinitions.UserApiSteps.i_send_get_request_to_user_api()
+w  Then the response status should be 200       # api.stepdefinitions.UserApiSteps.the_response_status_should_be_200()
+~  And the response should contain user details # api.stepdefinitions.UserApiSteps.the_response_should_contain_user_details()
+
+@api
+hScenario: Create new user                             # src/test/java/api/features/user_api.feature:10
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
++Driver info: driver.version: ChromeDriver
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+w  Given I have user data to create                    # api.stepdefinitions.UserApiSteps.i_have_user_data_to_create()
+  When I send POST request to create user             # api.stepdefinitions.UserApiSteps.i_send_post_request_to_create_user()
+~  Then the response status should be 200              # api.stepdefinitions.UserApiSteps.the_response_status_should_be_200()
+Œ  And the response should contain the created user ID # api.stepdefinitions.UserApiSteps.the_response_should_contain_the_created_user_id()
+
+@api
+fScenario: Update user                               # src/test/java/api/features/user_api.feature:16
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
++Driver info: driver.version: ChromeDriver
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+‚  Given I have an existing user ID and new data     # api.stepdefinitions.UserApiSteps.i_have_an_existing_user_id_and_new_data()
+|  When I send PUT request to update user            # api.stepdefinitions.UserApiSteps.i_send_put_request_to_update_user()
+|  Then the response status should be 200            # api.stepdefinitions.UserApiSteps.the_response_status_should_be_200()
+ˆ  And the response should contain updated user data # api.stepdefinitions.UserApiSteps.the_response_should_contain_updated_user_data()
+
+@api
+_Scenario: Delete user                        # src/test/java/api/features/user_api.feature:22
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
++Driver info: driver.version: ChromeDriver
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+
+x  Given I have an existing user ID to delete # api.stepdefinitions.UserApiSteps.i_have_an_existing_user_id_to_delete()
+x  When I send DELETE request to delete user  # api.stepdefinitions.UserApiSteps.i_send_delete_request_to_delete_user()
+u  Then the response status should be 200     # api.stepdefinitions.UserApiSteps.the_response_status_should_be_200()
+x  And the response should confirm deletion   # api.stepdefinitions.UserApiSteps.the_response_should_confirm_deletion()
+	
+	@web
+	]Scenario: Successful login                 # src/test/java/web/features/login_web.feature:4
+	“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+	ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+	6Build info: version: '4.21.0', revision: '79ed462ef4'
+	bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+	+Driver info: driver.version: ChromeDriver
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+	T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+	Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	
+	i  Given I am on the login page             # web.stepdefinitions.LoginWebSteps.i_am_on_the_login_page()
+	v  When I enter valid username and password # web.stepdefinitions.LoginWebSteps.i_enter_valid_username_and_password()
+	l  Then I should see the homepage           # web.stepdefinitions.LoginWebSteps.i_should_see_the_homepage()
+	
+
+	
+@web
+	
+bScenario: Failed login with invalid credentials # src/test/java/web/features/login_web.feature:9
+	
+“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+	
+ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+	
+6Build info: version: '4.21.0', revision: '79ed462ef4'
+	
+bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+	
++Driver info: driver.version: ChromeDriver
+	
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+	
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	
+bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+	
+T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+	
+Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+	
+[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+	
+Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	
+T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	
+J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	
+D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	
+8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	
+6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	
+Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	
+M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	
+T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	
+V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	
+L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	
+D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	
+<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	
+<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	
+>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	
+]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	
+q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	
+T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	
+F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	
+E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	
+A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	
+<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	
+;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	
+A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	
+E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	
+G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	
+E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	
+F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	
+o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	
+b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	
+f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	
+R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	
+F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	
+?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	
+v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	
+p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	
+‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	
+u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	
+T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	
+f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	
+n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	
+@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	
+Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	
+j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	
+y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	
+D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	
+X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	
+o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	
+Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	
+Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	
+k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	
+ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	
+‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	
+^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	
+_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	
+
+	
+n  Given I am on the login page                  # web.stepdefinitions.LoginWebSteps.i_am_on_the_login_page()
+	
+}  When I enter invalid username and password    # web.stepdefinitions.LoginWebSteps.i_enter_invalid_username_and_password()
+	
+u  Then I should see an error message            # web.stepdefinitions.LoginWebSteps.i_should_see_an_error_message()
+	
+	@web
+	cScenario: Logout user                           # src/test/java/web/features/login_web.feature:14
+	“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+	ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+	6Build info: version: '4.21.0', revision: '79ed462ef4'
+	bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+	+Driver info: driver.version: ChromeDriver
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+	T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+	Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	
+	(  Given I am logged in as a valid user
+	  When I click logout button
+	1  Then I should be redirected to the login page
+	
+	@web
+	_Scenario: Add product to cart               # src/test/java/web/features/login_web.feature:19
+	“      org.openqa.selenium.remote.NoSuchDriverException: Unable to obtain: chromedriver, error chromedriver must exist: D:\drivers\chromedriver.exe
+	ˆFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location/
+	6Build info: version: '4.21.0', revision: '79ed462ef4'
+	bSystem info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+	+Driver info: driver.version: ChromeDriver
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:121)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	bCaused by: java.lang.IllegalStateException: chromedriver must exist: D:\drivers\chromedriver.exe
+	T	at org.openqa.selenium.internal.Require$FileStateChecker.isFile(Require.java:346)
+	Z	at org.openqa.selenium.internal.Require$FileStateChecker.isExecutable(Require.java:368)
+	[	at org.openqa.selenium.remote.service.DriverFinder.getBinaryPaths(DriverFinder.java:118)
+	Y	at org.openqa.selenium.remote.service.DriverFinder.getDriverPath(DriverFinder.java:55)
+	T	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:99)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:83)
+	J	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:51)
+	D	at web.stepdefinitions.LoginWebSteps.setup(LoginWebSteps.java:23)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	8	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	6	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	Z	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	M	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	T	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	V	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	L	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	D	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	<	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	<	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
+	>	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	]	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	q	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	T	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	F	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	E	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	A	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	<	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	;	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	A	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	E	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	G	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	E	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	F	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	o	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	b	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	f	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	R	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	F	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	?	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	v	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:112)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	p	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	‹	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:54)
+	u	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:53)
+	T	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	f	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	n	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	@	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	Z	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	j	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	y	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	D	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestClass(Unknown Source)
+	X	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:183)
+	o	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	Z	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	Y	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	k	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	ƒ	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	‚	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	^	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	_	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	
+	(  Given I am logged in as a valid user
+	$  When I add a product to the cart
+	-  Then the cart should contain that product

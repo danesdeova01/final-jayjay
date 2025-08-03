@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="User API" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-08-03T03:34:22" hostname="LAPTOP-05EG2TE6" time="5.789">
+  <properties/>
+  <testcase name="Get user by ID" classname="User API" time="1.783"/>
+  <testcase name="Create new user" classname="User API" time="0.649"/>
+  <testcase name="Update user" classname="User API" time="1.964"/>
+  <testcase name="Delete user" classname="User API" time="1.393"/>
+  <system-out><![CDATA[
+@api
+Scenario: Get user by ID                       # src/test/java/api/features/user_api.feature:4
+  Given I have a valid user ID                 # api.stepdefinitions.UserApiSteps.i_have_a_valid_user_id()
+  When I send GET request to user API          # api.stepdefinitions.UserApiSteps.i_send_get_request_to_user_api()
+  Then the user response status should be 200  # api.stepdefinitions.UserApiSteps.the_user_response_status_should_be_200()
+  And the response should contain user details # api.stepdefinitions.UserApiSteps.the_response_should_contain_user_details()
+
+@api
+Scenario: Create new user                             # src/test/java/api/features/user_api.feature:10
+[DEBUG] Preparing user data for create
+  Given I have user data to create                    # api.stepdefinitions.UserApiSteps.i_have_user_data_to_create()
+  When I send POST request to create user             # api.stepdefinitions.UserApiSteps.i_send_post_request_to_create_user()
+  Then the user response status should be 200         # api.stepdefinitions.UserApiSteps.the_user_response_status_should_be_200()
+  And the response should contain the created user ID # api.stepdefinitions.UserApiSteps.the_response_should_contain_the_created_user_id()
+
+@api @update
+Scenario: Update user                               # src/test/java/api/features/user_api.feature:17
+[DEBUG] Preparing user data for create
+  Given I have an existing user ID and new data     # api.stepdefinitions.UserApiSteps.i_have_an_existing_user_id_and_new_data()
+  When I send PUT request to update user            # api.stepdefinitions.UserApiSteps.i_send_put_request_to_update_user()
+  Then the user response status should be 200       # api.stepdefinitions.UserApiSteps.the_user_response_status_should_be_200()
+  And the response should contain updated user data # api.stepdefinitions.UserApiSteps.the_response_should_contain_updated_user_data()
+
+@api @delete
+Scenario: Delete user                         # src/test/java/api/features/user_api.feature:24
+[DEBUG] Preparing user data for create
+  Given I have an existing user ID to delete  # api.stepdefinitions.UserApiSteps.i_have_an_existing_user_id_to_delete()
+  When I send DELETE request to delete user   # api.stepdefinitions.UserApiSteps.i_send_delete_request_to_delete_user()
+  Then the user response status should be 200 # api.stepdefinitions.UserApiSteps.the_user_response_status_should_be_200()
+  And the response should confirm deletion    # api.stepdefinitions.UserApiSteps.the_response_should_confirm_deletion()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

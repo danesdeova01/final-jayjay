@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tag API" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-03T03:34:17" hostname="LAPTOP-05EG2TE6" time="4.534">
+  <properties/>
+  <testcase name="Get list of tags" classname="Tag API" time="4.534"/>
+  <system-out><![CDATA[
+@api
+Scenario: Get list of tags                       # src/test/java/api/features/tag_api.feature:4
+  When I send GET request to tag API             # api.stepdefinitions.TagApiSteps.i_send_get_request_to_tag_api()
+  Then the tag response status should be 200     # api.stepdefinitions.TagApiSteps.the_tag_response_status_should_be_200()
+  And the response should contain a list of tags # api.stepdefinitions.TagApiSteps.the_response_should_contain_a_list_of_tags()
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+]]></system-err>
+</testsuite>
