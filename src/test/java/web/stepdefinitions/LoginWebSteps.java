@@ -77,6 +77,11 @@ public class LoginWebSteps {
         loginPage.enterUsername("standard_user");
         loginPage.enterPassword("secret_sauce");
         loginPage.clickLogin();
+
+        // Tunggu sampai halaman inventory benar-benar loaded
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.urlContains("inventory.html"));
+
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"));
     }
 
@@ -88,6 +93,9 @@ public class LoginWebSteps {
 
     @Then("I should be redirected to the login page")
     public void iShouldBeRedirectedToTheLoginPage() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.urlContains("saucedemo.com"));
+
         Assert.assertTrue(driver.getCurrentUrl().contains("saucedemo.com"));
     }
 
@@ -110,22 +118,25 @@ public class LoginWebSteps {
     public void i_proceed_to_checkout_with_valid_information() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
+        // Klik ikon keranjang belanja
         driver.findElement(By.className("shopping_cart_link")).click();
 
+        // Klik tombol Checkout saat clickable
         wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout"))).click();
 
+        // Tunggu form input checkout (first-name) tampil dan isi form
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first-name"))).sendKeys("Test");
         driver.findElement(By.id("last-name")).sendKeys("User");
         driver.findElement(By.id("postal-code")).sendKeys("12345");
 
+        // Klik Continue dan tunggu halaman berikutnya siap
         driver.findElement(By.id("continue")).click();
 
-        // Tunggu tombol finish clickable, lalu klik
+        // Tunggu tombol Finish clickable lalu klik
         wait.until(ExpectedConditions.elementToBeClickable(By.id("finish"))).click();
 
-        // Tunggu halaman konfirmasi selesai loading sepenuhnya
-        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
+        // Tunggu sampai halaman selesai load penuh menggunakan JS readyState
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
     }
 
     @Then("I should see the order confirmation")
