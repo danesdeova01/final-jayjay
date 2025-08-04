@@ -4,11 +4,15 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import web.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.time.Duration;
 
 public class LoginWebSteps {
     WebDriver driver;
@@ -18,7 +22,7 @@ public class LoginWebSteps {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new"); // gunakan mode headless baru (atau ganti dengan `--headless=chrome` untuk versi stabil)
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
@@ -27,7 +31,7 @@ public class LoginWebSteps {
 
         driver = new ChromeDriver(options);
         loginPage = new LoginPage(driver);
-        driver.get("https://www.saucedemo.com/"); // penting: buka halaman login di awal
+        driver.get("https://www.saucedemo.com/");
     }
 
     @After
@@ -36,8 +40,6 @@ public class LoginWebSteps {
             driver.quit();
         }
     }
-
-    // ========= Step Definitions =========
 
     @Given("I am on the login page")
     public void iAmOnTheLoginPage() {
@@ -87,5 +89,49 @@ public class LoginWebSteps {
     @Then("I should be redirected to the login page")
     public void iShouldBeRedirectedToTheLoginPage() {
         Assert.assertTrue(driver.getCurrentUrl().contains("saucedemo.com"));
+    }
+
+    @When("I add a product to cart")
+    public void i_add_a_product_to_cart() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement addToCartBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-sauce-labs-backpack")));
+        addToCartBtn.click();
+    }
+
+    @Then("the cart should contain the product")
+    public void the_cart_should_contain_the_product() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver.findElement(By.className("shopping_cart_link")).click();
+        WebElement productName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("inventory_item_name")));
+        Assert.assertTrue(productName.getText().toLowerCase().contains("backpack"));
+    }
+
+    @When("I proceed to checkout with valid information")
+    public void i_proceed_to_checkout_with_valid_information() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        driver.findElement(By.className("shopping_cart_link")).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("checkout"))).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("first-name"))).sendKeys("Test");
+        driver.findElement(By.id("last-name")).sendKeys("User");
+        driver.findElement(By.id("postal-code")).sendKeys("12345");
+
+        driver.findElement(By.id("continue")).click();
+
+        // Tunggu tombol finish clickable, lalu klik
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("finish"))).click();
+
+        // Tunggu halaman konfirmasi selesai loading sepenuhnya
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
+    }
+
+    @Then("I should see the order confirmation")
+    public void i_should_see_the_order_confirmation() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        String confirmationText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("complete-header"))).getText();
+        Assert.assertTrue(confirmationText.toLowerCase().contains("thank you"));
     }
 }
