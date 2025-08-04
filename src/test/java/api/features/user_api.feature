@@ -13,6 +13,11 @@ Feature: User API
     Then the user response status should be 200
     And the response should contain the created user ID
 
+  Scenario: Create user with invalid data (negative)
+    Given I have invalid user data to create
+    When I send POST request to create user
+    Then the user response status should be 400
+
   @update
   Scenario: Update user
     Given I have an existing user ID and new data
